@@ -1,5 +1,5 @@
 @startuml
-!include https://raw.githubusercontent.com/adrianvlupu/C4-PlantUML/latest/C4_Dynamic.puml
+!include https://raw.githubusercontent.com/scarrier/C4-PlantUML/latest/C4_Dynamic.puml
 
 LAYOUT_TOP_DOWN()
 LAYOUT_WITH_LEGEND()

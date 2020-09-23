@@ -1,6 +1,4 @@
-!include https://raw.githubusercontent.com/adrianvlupu/C4-PlantUML/latest/C4.puml
-' uncomment the following line and comment the first to use locally
-' !include C4.puml
+!include https://raw.githubusercontent.com/scarrier/C4-PlantUML/latest/C4.puml
 
 ' Scope: A single software system.
 ' Primary elements: The software system in scope.
@@ -129,33 +127,27 @@ endlegend
 ' ##################################
 
 !function $getPerson($label, $descr, $sprite)
-!if ($descr == "") && ($sprite == "")
-!return '<$person>\n=='+$label
-!endif
-!if ($descr == "") && ($sprite != "")
-!return '<$'+$sprite+'>\n=='+$label
-!endif
-!if ($descr != "") && ($sprite == "")
-!return '<$person>\n=='+$label+'\n\n '+$descr
-!endif
-!if ($descr != "") && ($sprite != "")
-!return '<$'+$sprite+'>\n=='+$label+'\n\n '+$descr
-!endif
+    !if ($descr != "")
+        !$descr = "\n" + $descr
+    !endif
+
+    !if ($sprite == "")
+        !return $label + '\n<size:' + $TECHN_FONT_SIZE + '>[Person]</size>\n'+$descr
+    !endif
+    
+    !if ($sprite != "")
+        !return '<$person>\n' + $label + '\n<size:' + $TECHN_FONT_SIZE + '>[Person]</size>\n'+$descr
+    !endif
 !endfunction
 
 !function $getSystem($label, $descr, $sprite)
-!if ($descr == "") && ($sprite == "")
-!return '=='+$label
-!endif
-!if ($descr == "") && ($sprite != "")
-!return '<$'+$sprite+'>\n=='+$label
-!endif
-!if ($descr != "") && ($sprite == "")
-!return '=='+$label+'\n\n '+$descr
-!endif
-!if ($descr != "") && ($sprite != "")
-!return '<$'+$sprite+'>\n=='+$label+'\n\n '+$descr
-!endif
+    !if ($sprite == "")
+        !return '==' + $label + '\n<size:' + $TECHN_FONT_SIZE + '>[System]</size>\n\n '+$descr
+    !endif
+    
+    !if ($sprite != "")
+        !return '<$'+$sprite+'>\n=='+$label+'\n<size:' + $TECHN_FONT_SIZE + '>[System]</size>\n\n '+$descr
+    !endif
 !endfunction
 
 !unquoted procedure Person($alias, $label, $descr="", $sprite="")

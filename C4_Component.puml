@@ -1,4 +1,4 @@
-!include https://raw.githubusercontent.com/adrianvlupu/C4-PlantUML/latest/C4_Container.puml
+!include https://raw.githubusercontent.com/scarrier/C4-PlantUML/latest/C4_Container.puml
 ' uncomment the following line and comment the first to use locally
 ' !include C4_Container.puml
 
@@ -49,18 +49,18 @@ endlegend
 ' ##################################
 
 !function $getComponent($label, $techn, $descr, $sprite)
-!if ($descr == "") && ($sprite == "")
-!return '=='+$label+'\n//<size:'+$TECHN_FONT_SIZE+'>['+$techn+']</size>//'
-!endif
-!if ($descr == "") && ($sprite != "")
-!return '<$'+$sprite+'>\n=='+$label+'\n//<size:'+$TECHN_FONT_SIZE+'>['+$techn+']</size>//'
-!endif
-!if ($descr != "") && ($sprite == "")
-!return '=='+$label+'\n//<size:'+$TECHN_FONT_SIZE+'>['+$techn+']</size>//\n\n '+$descr
-!endif
-!if ($descr != "") && ($sprite != "")
-!return '<$'+$sprite+'>\n=='+$label+'\n//<size:'+$TECHN_FONT_SIZE+'>['+$techn+']</size>//\n\n '+$descr
-!endif
+!    !if ($descr != "")
+        !$descr = "\n" + $descr
+    !endif
+
+    !if ($sprite == "")
+        !return '=='+$label+'\n<size:'+$TECHN_FONT_SIZE+'>[Component: '+$techn+']</size>\n '+$descr
+    !endif
+
+    !if ($sprite != "")
+        !return '<$'+$sprite+'>\n=='+$label+'\n<size:'+$TECHN_FONT_SIZE+'>[Component: '+$techn+']</size>\n '+$descr
+    !endif
+
 !endfunction
 
 !unquoted procedure Component($alias, $label, $techn, $descr="", $sprite="")

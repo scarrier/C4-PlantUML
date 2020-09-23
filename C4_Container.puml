@@ -1,4 +1,4 @@
-!include https://raw.githubusercontent.com/adrianvlupu/C4-PlantUML/latest/C4_Context.puml
+!include https://raw.githubusercontent.com/scarrier/C4-PlantUML/latest/C4_Context.puml
 ' uncomment the following line and comment the first to use locally
 ' !include C4_Context.puml
 
@@ -48,18 +48,17 @@ endlegend
 ' ##################################
 
 !function $getContainer($label, $techn, $descr, $sprite)
-!if ($descr == "") && ($sprite == "")
-!return '=='+$label+'\n//<size:'+$TECHN_FONT_SIZE+'>['+$techn+']</size>//'
-!endif
-!if ($descr == "") && ($sprite != "")
-!return '<$'+$sprite+'>\n=='+$label+'\n//<size:'+$TECHN_FONT_SIZE+'>['+$techn+']</size>//'
-!endif
-!if ($descr != "") && ($sprite == "")
-!return '=='+$label+'\n//<size:'+$TECHN_FONT_SIZE+'>['+$techn+']</size>//\n\n '+$descr
-!endif
-!if ($descr != "") && ($sprite != "")
-!return '<$'+$sprite+'>\n=='+$label+'\n//<size:'+$TECHN_FONT_SIZE+'>['+$techn+']</size>//\n\n '+$descr
-!endif
+    !if ($descr != "")
+        !$descr = "\n" + $descr
+    !endif
+
+    !if ($sprite == "")
+        !return '=='+$label+'\n<size:'+$TECHN_FONT_SIZE+'>[Container: '+$techn+']</size>\n '+$descr
+    !endif
+
+    !if ($sprite != "")
+        !return '<$'+$sprite+'>\n=='+$label+'\n<size:'+$TECHN_FONT_SIZE+'>[Container: '+$techn+']</size>\n '+$descr
+    !endif
 !endfunction
 
 !unquoted procedure Container($alias, $label, $techn, $descr="", $sprite="")

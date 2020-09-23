@@ -1,5 +1,4 @@
 ' C4-PlantUML
-' https://github.com/adrianvlupu/C4-PlantUML
 
 ' Colors
 ' ##################################
@@ -15,6 +14,9 @@
 
 skinparam defaultTextAlignment center
 
+skinparam TitleFontSize 32
+skinparam TitleBorderColor "#AAAAAA"
+
 skinparam wrapWidth 200
 skinparam maxMessageSize 150
 
@@ -25,6 +27,7 @@ skinparam LegendFontColor $LEGEND_FONT_COLOR
 skinparam rectangle {
     StereotypeFontSize 12
     shadowing false
+    RoundCorner 30
 }
 
 skinparam database {

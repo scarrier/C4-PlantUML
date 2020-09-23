@@ -132,11 +132,11 @@ endlegend
     !endif
 
     !if ($sprite == "")
-        !return $label + '\n<size:' + $TECHN_FONT_SIZE + '>[Person]</size>\n'+$descr
+        !return '==' +$label + '\n<size:' + $TECHN_FONT_SIZE + '>[Person]</size>\n'+$descr
     !endif
     
     !if ($sprite != "")
-        !return '<$person>\n' + $label + '\n<size:' + $TECHN_FONT_SIZE + '>[Person]</size>\n'+$descr
+        !return '<$person>\n==' + $label + '\n<size:' + $TECHN_FONT_SIZE + '>[Person]</size>\n'+$descr
     !endif
 !endfunction
 

@@ -52,9 +52,7 @@ skinparam rectangle<<boundary>> {
 ' Layout
 ' ##################################
 
-!procedure HIDE_STEREOTYPE()
 hide stereotype
-!endprocedure
 
 !procedure LAYOUT_AS_SKETCH()
 skinparam backgroundColor #EEEBDC

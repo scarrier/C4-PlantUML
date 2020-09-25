@@ -1,48 +1,68 @@
 {
-	"C4_Include_Context": {
+	"C4_Context_Diagram": {
 		"scope": "plantuml",
-		"prefix": "Include C4 Context Diagram",
+		"prefix": "Create C4 Context Diagram",
 		"body": [
+			"@startuml ContextDiagram",
 			"!include https://raw.githubusercontent.com/scarrier/C4-PlantUML/latest/C4_Context.puml",
-			"$0"
+			"",
+			"title ${1:project} Context Diagram",
+			"$0",
+			"@enduml"
 		],
-		"description": "Include C4 Context Diagram"
+		"description": "Create C4 Context Diagram"
 	},
-	"C4_Include_Container": {
+	"C4_Container_Diagram": {
 		"scope": "plantuml",
-		"prefix": "Include C4 Container Diagram",
+		"prefix": "Create C4 Container Diagram",
 		"body": [
+			"@startuml ContainerDiagram",
 			"!include https://raw.githubusercontent.com/scarrier/C4-PlantUML/latest/C4_Container.puml",
-			"$0"
+			"",
+			"title ${1:project} Container Diagram",
+			"$0",
+			"@enduml"
 		],
-		"description": "Include C4 Container Diagram"
+		"description": "Create C4 Container Diagram"
 	},
-	"C4_Include_Component": {
+	"C4_Component_Diagram": {
 		"scope": "plantuml",
-		"prefix": "Include C4 Component Diagram",
+		"prefix": "Create C4 Component Diagram",
 		"body": [
+			"@startuml ComponentDiagram",
 			"!include https://raw.githubusercontent.com/scarrier/C4-PlantUML/latest/C4_Component.puml",
-			"$0"
+			"",
+			"title ${1:project} Component Diagram",
+			"$0",
+			"@enduml"
 		],
-		"description": "Include C4 Component Diagram"
+		"description": "Create C4 Component Diagram"
 	},
-	"C4_Include_Deployment": {
+	"C4_Deployment_Diagram": {
 		"scope": "plantuml",
-		"prefix": "Include C4 Deployment Diagram",
+		"prefix": "Create C4 Deployment Diagram",
 		"body": [
+			"@startuml DeploymentDiagram",
 			"!include https://raw.githubusercontent.com/scarrier/C4-PlantUML/latest/C4_Deployment.puml",
-			"$0"
+			"",
+			"title ${1:project} Deployment Diagram",
+			"$0",
+			"@enduml"
 		],
-		"description": "Include C4 Deployment Diagram"
+		"description": "Create C4 Deployment Diagram"
 	},
-	"C4_Include_Dynamic": {
+	"C4_Dynamic_Diagram": {
 		"scope": "plantuml",
-		"prefix": "Include C4 Dynamic Diagram",
+		"prefix": "Create C4 Dynamic Diagram",
 		"body": [
+			"@startuml DynamicDiagram",
 			"!include https://raw.githubusercontent.com/scarrier/C4-PlantUML/latest/C4_Dynamic.puml",
-			"$0"
+			"",
+			"title ${1:project} Dynamic Diagram",
+			"$0",
+			"@enduml"
 		],
-		"description": "Include C4 Dynamic Diagram"
+		"description": "Create C4 Dynamic Diagram"
 	},
 	"C4_Person": {
 		"scope": "plantuml",

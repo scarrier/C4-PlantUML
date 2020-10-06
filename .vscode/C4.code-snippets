@@ -238,6 +238,30 @@
 		],
 		"description": "Add External System with Description to C4 diagram"
 	},
+	"C4_System_3p": {
+		"scope": "plantuml",
+		"prefix": [
+			"Third Party System",
+			"System (Third Party)"
+		],
+		"body": [
+			"System_3P(${1:alias}, \"${2:label}\")",
+			"$0"
+		],
+		"description": "Add Third Party System to C4 diagram"
+	},
+	"C4_System_3p_Descr": {
+		"scope": "plantuml",
+		"prefix": [
+			"Third Party System with Description",
+			"System (Third Party) with Description"
+		],
+		"body": [
+			"System_3P(${1:alias}, \"${2:label}\", \"${3:description}\")",
+			"$0"
+		],
+		"description": "Add Third Party System with Description to C4 diagram"
+	},
 	"C4_System_Boundary": {
 		"scope": "plantuml",
 		"prefix": [

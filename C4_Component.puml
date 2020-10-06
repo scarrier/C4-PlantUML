@@ -40,8 +40,8 @@ legend right
 |<$SYSTEM_BG_COLOR> system |
 |<$CONTAINER_BG_COLOR> container |
 |<$COMPONENT_BG_COLOR> component |
-|<$EXTERNAL_PERSON_BG_COLOR> external person |
-|<$EXTERNAL_SYSTEM_BG_COLOR> external system |
+|<$EXTERNAL_SYSTEM_BG_COLOR> internal system |
+|<$THIRD_PARTY_SYSTEM_BG_COLOR> third party system |
 endlegend
 !endprocedure
 

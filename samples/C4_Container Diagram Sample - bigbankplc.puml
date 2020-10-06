@@ -19,7 +19,7 @@ System_Boundary(c1, "Internet Banking") {
     Container(backend_api, "API Application", "Java, Docker Container", "Provides Internet banking functionality via API")
 }
 
-System_Ext(email_system, "E-Mail System", "The internal Microsoft Exchange system")
+System_3P(email_system, "E-Mail System", "The external Microsoft Exchange system")
 System_Ext(banking_system, "Mainframe Banking System", "Stores all of the core banking information about customers, accounts, transactions, etc.")
 
 Rel(customer, web_app, "Uses", "HTTPS")
